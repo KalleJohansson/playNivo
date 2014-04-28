@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" href="/public/stylesheets/themes/default/default.css" type="text/css" media="screen" />
+	    <link rel="stylesheet" href="/public/stylesheets/themes/light/light.css" type="text/css" media="screen" />
+	    <link rel="stylesheet" href="/public/stylesheets/themes/dark/dark.css" type="text/css" media="screen" />
+	    <link rel="stylesheet" href="/public/stylesheets/themes/bar/bar.css" type="text/css" media="screen" />
+	    <link rel="stylesheet" href="/public/stylesheets/nivo-slider.css" type="text/css" media="screen" />
+	    <link rel="stylesheet" href="/public/stylesheets/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+        #{doLayout /}
+        <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.js"></script>
+    	<script type="text/javascript" src="/public/javascripts/jquery.nivo.slider.js"></script>
+    	<script type="text/javascript">
+    		$(window).load(function() {
+        		$('#slider').nivoSlider();
+    		});
+    	</script>
+    </body>
+</html>
